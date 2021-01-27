@@ -1,0 +1,71 @@
+aplikacja do tworzenia, edycji oraz wyszukiwania przepisów kulinarnych oraz sporządzania planów dietetycznych z listami zakupów
+
+w aplikacji są 3 poziomy uprawnień: USER, MODERATOR, ADMIN
+
+USER:
+	- przy tworzeniu konta każdy użytkownik ma automatycznie przydzielane to uprawnienie
+	- uprawnienie pozwala na:
+		-dodawanie swoich przepisów i ich edycje oraz usuwanie
+		-przeglądanie przepisów innych użytkowników i ich ocenianie
+		-edycje swoich danych oraz usunięcie konta
+MODERATOR:
+	-rozszerza uprawnienia USER-a o usuwanie, edytowanie przepisów wszystkich użytkowników
+	-umożliwia usuwanie, blokowanie użytkowników z uprawniwniem USER
+	-akceptuje przepisy dodawane przez użytkowników
+ADMIN:
+	-administrator ma pełną edycje wszystkich kont z możliwością zmiany uprawnień
+
+
+Do każdego przepisu kulinarnego należy wybrać co najmniej jeden typ posiłku którego dotyczy przepis:
+
+-śniadanie
+-obiad
+-podwieczorek/deser
+-kolacja
+-napój
+-inne
+
+oraz co najmniej jedną kategorię z listy:
+
+-Chleb i pieczywo
+-Ciasta i ciasteczka
+-Dania główne
+-Desery
+-Dodatki
+      Do ciast i deserów
+      Obiadowe
+-Drób
+-Dziczyzna
+-Grill i barbeque
+-Kluski i pierogi
+-Makarony
+-Mączne i zbożowe
+-Naleśniki, placki i omlety
+-Napoje i drinki
+-Pizza
+-Potrawy mięsne
+-Potrawy mleczne
+-Potrawy z grzybów
+-Potrawy z jaj
+-Potrawy z warzyw
+-Przekąski i przystawki
+-Przetwory
+-Ryby i owoce morza
+-Sałatki
+-Sosy i dipy
+-Tortille i kebaby
+-Wieprzowina
+-Wołowina
+-Wegetariańskie
+-Wegańskie
+-Zapiekanki
+-Zupy
+-Pozostałe
+
+W każdym przepisie wybieramy z listy co najmniej 2 składniki:
+lista składników.html
+
+do każdego składnika przypisana jest wartość energetyczna, ilość białka, węglowodanów i tłuszczu
+
+aplikacja pozwala na konstruowanie planów żywieniowych oraz generuje liste zakupów
+

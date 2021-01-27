@@ -14,10 +14,10 @@ public class DemoController {
 	
 	// add request mapping for /leaders
 
-	@GetMapping("/moderators")
+	@GetMapping("/moderator")
 	public String showLeaders() {
 		
-		return "moderators";
+		return "moderator";
 	}
 	
 	// add request mapping for /systems

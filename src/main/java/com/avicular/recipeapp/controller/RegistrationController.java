@@ -40,14 +40,14 @@ public class RegistrationController {
 	@GetMapping("/showRegistrationForm")
 	public String showMyLoginPage(Model theModel) {
 		
-		theModel.addAttribute("crmUser", new AppUser());
+		theModel.addAttribute("appUser", new AppUser());
 		
 		return "registration-form";
 	}
 
 	@PostMapping("/processRegistrationForm")
 	public String processRegistrationForm(
-				@Valid @ModelAttribute("AppUser") AppUser theAppUser, 
+				@Valid @ModelAttribute("appUser") AppUser theAppUser, 
 				BindingResult theBindingResult, 
 				Model theModel) {
 		

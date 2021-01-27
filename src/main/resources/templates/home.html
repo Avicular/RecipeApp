@@ -29,12 +29,12 @@
 		</div>		
 	</div>
 	
-	<div sec:authorize="hasAnyRole('ROLE_MANAGER','ROLE_ADMIN')">
+	<div sec:authorize="hasAnyRole('ROLE_MODERATOR','ROLE_ADMIN')">
 	
 		<!-- Add a link to point to /moderators ... this is for the moderator -->
 		
 		<p>
-			<a th:href="@{/moderators}">Moderator Panel</a>
+			<a th:href="@{/moderator}">Moderator Panel</a>
 		</p>
 
 	</div>	
