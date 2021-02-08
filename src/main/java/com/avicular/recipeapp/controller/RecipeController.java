@@ -2,6 +2,7 @@ package com.avicular.recipeapp.controller;
 
 import java.util.List;
 
+import com.avicular.recipeapp.repository.MealTypeRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,9 +19,11 @@ import com.avicular.recipeapp.service.RecipeService;
 public class RecipeController {
 
 	private RecipeService recipeService;
+	private MealTypeRepository mealTypeRepository;
 
-	public RecipeController(RecipeService theRecipeService) {
+	public RecipeController(RecipeService theRecipeService, MealTypeRepository mealTypeRepository) {
 		recipeService = theRecipeService;
+		this.mealTypeRepository = mealTypeRepository;
 	}
 
 	@GetMapping("/list")
@@ -39,6 +42,8 @@ public class RecipeController {
 		Recipe theRecipe = new Recipe();
 
 		theModel.addAttribute("recipe", theRecipe);
+		theModel.addAttribute("mealTypeList", mealTypeRepository.findAll());
+
 
 		return "recipes/recipe-form";
 	}

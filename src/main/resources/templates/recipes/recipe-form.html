@@ -38,10 +38,9 @@
 					class="form-control mb-3 col-4" placeholder="Preparation">
 			
 			<select class="form-control" id="testOrder" name="testOrder">
-		        <option value="">Select Test Order</option>
-		        <option th:each="test : ${tests}"
-	                th:value="${test.testCode}"
-	                th:text="${test.testCode}+' : '+${test.testName}"></option>
+		        <option th:each="recipe : ${mealTypeList}"
+	                th:value="${recipe.id}"
+	                th:text="${recipe.name}"></option>
 	  		  </select> 
 			<br>
 			<button type="submit" class="btn btn-info col-2">Save</button>
